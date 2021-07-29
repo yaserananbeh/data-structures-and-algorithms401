@@ -1,0 +1,21 @@
+# Singly Linked List
+<!-- Short summary or background information -->
+Linked List is a linear data structure. Unlike arrays, linked list elements are not stored at a contiguous location; the elements are linked using pointers.
+
+## Challenge
+<!-- Description of the challenge -->
+- Creating a node 
+- Creating a Singly Linked list 
+- Adding the insert method, the include method and the to string method
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+- insert method complexity : time (O(1)), space(O(n))
+- includes method complexity : time (O(n)), space(O(n))
+- toString method complexity : time (O(n)), space(O(n))
+
+## API
+<!-- Description of each method publicly available to your Linked List -->
+- Insert Method : this function accept a integer value to insert new node as a first node in a linked list 
+- Include Method : that accept a integer value and check if it's one of the node values inside the linked list if exist will return true otherwise will return false
+- To String Method : that return a string representing all the values in the Linked List, formatted as:
+"{ a } -> { b } -> { c } -> NULL"
