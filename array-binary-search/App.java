@@ -11,23 +11,24 @@ public class App {
     }
 
     public static void main(String[] args) {
-        int arr[] = { 2, 3, 4, 10, 40 };
-        int n = arr.length;
-        int x = 30;
-        int result = BinarySearch(arr, 0, n - 1, x);
+        int arr[] = { 15,20,22,35,50 };
+        int x = 22;
+        int result = BinarySearch(arr, x);
         if (result == -1)
-            System.out.println("Element not exist");
+            System.out.println("the element not exist");
         else
-            System.out.println("Element found at index " + result);
-        }
-    public static int BinarySearch(int arr[], int firstIndex, int lastIndex, int x) {
-        if (lastIndex >= firstIndex) {
-            int mid = firstIndex + (lastIndex - firstIndex) / 2;
-            if (arr[mid] == x)
-                return mid;
-            if (arr[mid] > x)
-                return BinarySearch(arr, firstIndex, mid - 1, x);
-            return BinarySearch(arr, mid + 1, lastIndex, x);
+            System.out.println("exist at index " + result);
+    }
+    public static int BinarySearch(int arr[], int x) {
+        int firstElement = 0, lastElement = arr.length - 1;
+        while (firstElement <= lastElement) {
+            int midElement = firstElement + (lastElement - firstElement) / 2;
+            if (arr[midElement] == x)
+                return midElement;
+            if (arr[midElement] < x)
+                firstElement = midElement + 1;
+            else
+                lastElement = midElement - 1;
         }
         return -1;
     }
