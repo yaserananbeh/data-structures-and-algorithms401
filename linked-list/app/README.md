@@ -19,3 +19,62 @@ Linked List is a linear data structure. Unlike arrays, linked list elements are 
 - Include Method : that accept a integer value and check if it's one of the node values inside the linked list if exist will return true otherwise will return false
 - To String Method : that return a string representing all the values in the Linked List, formatted as:
 "{ a } -> { b } -> { c } -> NULL"
+
+
+============================================================
+## Append Method
+# Challenge Summary
+<!-- Description of the challenge -->
+add to the last node in the linked list 
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![Image](Images/append-whiteboard.png)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+while loop to iterate over the linked list nodes 
+the complexity:
+- time :O(n)
+-  space : O(n)
+
+<!-- ## Solution -->
+<!-- Show how to run your code, and examples of it in action -->
+============================================================
+## Insert Before Value Method
+# Challenge Summary
+<!-- Description of the challenge -->
+method to add a new node before the node that has a value equal to the accepted value 
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![Image](Images/insertBeforeValue-whiteBoard.png)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+while loop to iterate over the linked list nodes 
+the complexity:
+- time :O(2n)
+-  space : O(n)
+
+<!-- ## Solution -->
+<!-- Show how to run your code, and examples of it in action -->
+============================================================
+## Insert After Value Method
+# Challenge Summary
+<!-- Description of the challenge -->
+method to add a new node after the node that has a value equal to the accepted value 
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![Image](Images/insertAfterValue-whiteBoard.png)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+while loop to iterate over the linked list nodes 
+the complexity:
+- time :O(n)
+-  space : O(n)
+
+<!-- ## Solution -->
+<!-- Show how to run your code, and examples of it in action -->

@@ -12,7 +12,7 @@ public class App {
         list1.insert(150);
         list1.insert(200);
         System.out.println("-------------------------------");
-        int value=10;
+        int value=200;
         System.out.println("Does the linked list include ("+value+") : "+list1.includes(value));
         System.out.println("-------------------------------");
 
@@ -35,7 +35,25 @@ public class App {
         System.out.println("-------------------------------");
         System.out.println(list1.toString());
         System.out.println("-------------------------------");
+        System.out.println("--------code challenge 06----------");
+        System.out.println("-------------------------------");
+        LinkedList list2=new LinkedList();
+        list2.append(20);
+        list2.append(40);
+        list2.append(80);
+        list2.append(100);
+        System.out.println(list2.toString());
+        System.out.println("-------------------------------");
+        System.out.println("insertBefore");
+        list2.insertBefore(40,50);
+        System.out.println(list2);
+        System.out.println("-------------------------------");
+        System.out.println("-------------------------------");
+        System.out.println("insertAfter");
 
+        list2.insertAfter(50,1000);
+        System.out.println(list2);
+        System.out.println("-------------------------------");
 
     }
 }
