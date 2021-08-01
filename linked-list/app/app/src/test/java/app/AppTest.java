@@ -69,5 +69,61 @@ class AppTest {
         String expected="{55}->{5}->NULL";
         assertEquals(expected,list.toString());
     }
+    @Test void testAppendOneElement() {
+        System.out.println("seventh Test SUCCESS");
+        LinkedList list=new LinkedList();
+        list.append(5);
+        String expected="{5}->NULL";
+        assertEquals(expected,list.toString());
+    }
+    @Test void testAppendManyElements() {
+        System.out.println("8th Test SUCCESS");
+        LinkedList list=new LinkedList();
+        list.append(5);
+        list.append(10);
+        list.append(15);
+        String expected="{5}->{10}->{15}->NULL";
+        assertEquals(expected,list.toString());
+    }
+    @Test void testBeforeMiddle() {
+        System.out.println("9th Test SUCCESS");
+        LinkedList list=new LinkedList();
+        list.append(5);
+        list.append(10);
+        list.append(15);
+        list.insertBefore(10,1000);
+        String expected="{5}->{1000}->{10}->{15}->NULL";
+        assertEquals(expected,list.toString());
+    }
+    @Test void testBeforeFirst() {
+        System.out.println("10th Test SUCCESS");
+        LinkedList list=new LinkedList();
+        list.append(5);
+        list.append(10);
+        list.append(15);
+        list.insertBefore(5,1000);
+        String expected="{1000}->{5}->{10}->{15}->NULL";
+        assertEquals(expected,list.toString());
+    }
+    @Test void testAfterMiddle() {
+        System.out.println("11th Test SUCCESS");
+        LinkedList list=new LinkedList();
+        list.append(5);
+        list.append(10);
+        list.append(15);
+        list.insertAfter(10,1000);
+        String expected="{5}->{10}->{1000}->{15}->NULL";
+        assertEquals(expected,list.toString());
+    }
+    @Test void testAfterLast() {
+        System.out.println("11th Test SUCCESS");
+        LinkedList list=new LinkedList();
+        list.append(5);
+        list.append(10);
+        list.append(15);
+        list.insertAfter(15,1000);
+        String expected="{5}->{10}->{15}->{1000}->NULL";
+        assertEquals(expected,list.toString());
+    }
 
 }
