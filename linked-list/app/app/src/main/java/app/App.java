@@ -63,6 +63,19 @@ public class App {
         list3.append(100);
         System.out.println(list3.getKthFromEnd(0));
         System.out.println("-------------------------------");
+        System.out.println("--------code challenge 08----------");
+        System.out.println("-------------------------------");
+        LinkedList list4=new LinkedList();
+        list4.append(1);
+        list4.append(3);
+        list4.append(2);
+        LinkedList list5=new LinkedList();
+        list5.append(5);
+        list5.append(9);
+        list5.append(4);
+        LinkedList zipList=new LinkedList();
+        zipList.head=zipList.zipLists(list4,list5);
+        System.out.println(zipList.toString());
 
     }
 }
