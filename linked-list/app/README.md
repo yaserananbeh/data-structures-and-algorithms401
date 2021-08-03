@@ -86,7 +86,7 @@ method accept a value and return the node value that is k places from the tail o
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![Image](Images/getkthTail whiteboard.png)
+![Image](Images/getkthTail-whiteboard.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
