@@ -4,126 +4,204 @@
 package app;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
 
-    @Test void instantiateEmptyLinkedList() {
+    @Test
+    void instantiateEmptyLinkedList() {
         System.out.println("First Test SUCCESS");
-        Node expected=null;
-        LinkedList list =new LinkedList();
-        assertEquals(expected,list.head);
-        String expected1="";
-        assertEquals(expected1,list.toString());
+        Node expected = null;
+        LinkedList list = new LinkedList();
+        assertEquals(expected, list.head);
+        String expected1 = "";
+        assertEquals(expected1, list.toString());
     }
-    @Test void insertIntoLinkedList() {
+
+    @Test
+    void insertIntoLinkedList() {
         System.out.println("Second Test SUCCESS");
-        LinkedList list=new LinkedList();
+        LinkedList list = new LinkedList();
         list.insert(3);
         list.insert(33);
         list.insert(333);
         list.insert(3333);
-        String expected="{3333}->{333}->{33}->{3}->NULL";
-        String actual=list.toString();
-        assertEquals(expected,actual);
+        String expected = "{3333}->{333}->{33}->{3}->NULL";
+        String actual = list.toString();
+        assertEquals(expected, actual);
     }
-    @Test void HeadAlwaysFirst() {
+
+    @Test
+    void HeadAlwaysFirst() {
         System.out.println("Third Test SUCCESS");
-        LinkedList list=new LinkedList();
+        LinkedList list = new LinkedList();
         list.insert(3);
         list.insert(33);
         list.insert(333);
         list.insert(3333);
         //the head value should be equal to 3333
-        int expected=3333;
-        assertEquals(expected,list.head.value);
+        int expected = 3333;
+        assertEquals(expected, list.head.value);
     }
-    @Test void insertMultipleNode() {
+
+    @Test
+    void insertMultipleNode() {
         System.out.println("Fourth Test SUCCESS");
-        LinkedList list=new LinkedList();
+        LinkedList list = new LinkedList();
         list.insert(5);
         list.insert(55);
         list.insert(555);
-        String expected="{555}->{55}->{5}->NULL";
-        String actual=list.toString();
-        assertEquals(expected,actual);
+        String expected = "{555}->{55}->{5}->NULL";
+        String actual = list.toString();
+        assertEquals(expected, actual);
     }
-    @Test void testincludesFunction() {
+
+    @Test
+    void testincludesFunction() {
         System.out.println("Fifth Test SUCCESS");
-        LinkedList list=new LinkedList();
+        LinkedList list = new LinkedList();
         list.insert(5);
         list.insert(55);
         list.insert(555);
-        boolean expected=true;
-        boolean actual=list.includes(55);
-        assertEquals(expected,actual);
-        boolean expected1=false;
-        boolean actual1=list.includes(60);
-        assertEquals(expected1,actual1);
+        boolean expected = true;
+        boolean actual = list.includes(55);
+        assertEquals(expected, actual);
+        boolean expected1 = false;
+        boolean actual1 = list.includes(60);
+        assertEquals(expected1, actual1);
     }
-    @Test void testToString() {
+
+    @Test
+    void testToString() {
         System.out.println("sixth Test SUCCESS");
-        LinkedList list=new LinkedList();
+        LinkedList list = new LinkedList();
         list.insert(5);
         list.insert(55);
-        String expected="{55}->{5}->NULL";
-        assertEquals(expected,list.toString());
+        String expected = "{55}->{5}->NULL";
+        assertEquals(expected, list.toString());
     }
-    @Test void testAppendOneElement() {
+
+    @Test
+    void testAppendOneElement() {
         System.out.println("seventh Test SUCCESS");
-        LinkedList list=new LinkedList();
+        LinkedList list = new LinkedList();
         list.append(5);
-        String expected="{5}->NULL";
-        assertEquals(expected,list.toString());
+        String expected = "{5}->NULL";
+        assertEquals(expected, list.toString());
     }
-    @Test void testAppendManyElements() {
+
+    @Test
+    void testAppendManyElements() {
         System.out.println("8th Test SUCCESS");
-        LinkedList list=new LinkedList();
+        LinkedList list = new LinkedList();
         list.append(5);
         list.append(10);
         list.append(15);
-        String expected="{5}->{10}->{15}->NULL";
-        assertEquals(expected,list.toString());
+        String expected = "{5}->{10}->{15}->NULL";
+        assertEquals(expected, list.toString());
     }
-    @Test void testBeforeMiddle() {
+
+    @Test
+    void testBeforeMiddle() {
         System.out.println("9th Test SUCCESS");
-        LinkedList list=new LinkedList();
+        LinkedList list = new LinkedList();
         list.append(5);
         list.append(10);
         list.append(15);
-        list.insertBefore(10,1000);
-        String expected="{5}->{1000}->{10}->{15}->NULL";
-        assertEquals(expected,list.toString());
+        list.insertBefore(10, 1000);
+        String expected = "{5}->{1000}->{10}->{15}->NULL";
+        assertEquals(expected, list.toString());
     }
-    @Test void testBeforeFirst() {
+
+    @Test
+    void testBeforeFirst() {
         System.out.println("10th Test SUCCESS");
-        LinkedList list=new LinkedList();
+        LinkedList list = new LinkedList();
         list.append(5);
         list.append(10);
         list.append(15);
-        list.insertBefore(5,1000);
-        String expected="{1000}->{5}->{10}->{15}->NULL";
-        assertEquals(expected,list.toString());
+        list.insertBefore(5, 1000);
+        String expected = "{1000}->{5}->{10}->{15}->NULL";
+        assertEquals(expected, list.toString());
     }
-    @Test void testAfterMiddle() {
+
+    @Test
+    void testAfterMiddle() {
         System.out.println("11th Test SUCCESS");
-        LinkedList list=new LinkedList();
+        LinkedList list = new LinkedList();
         list.append(5);
         list.append(10);
         list.append(15);
-        list.insertAfter(10,1000);
-        String expected="{5}->{10}->{1000}->{15}->NULL";
-        assertEquals(expected,list.toString());
+        list.insertAfter(10, 1000);
+        String expected = "{5}->{10}->{1000}->{15}->NULL";
+        assertEquals(expected, list.toString());
     }
-    @Test void testAfterLast() {
+
+    @Test
+    void testAfterLast() {
         System.out.println("11th Test SUCCESS");
-        LinkedList list=new LinkedList();
+        LinkedList list = new LinkedList();
         list.append(5);
         list.append(10);
         list.append(15);
-        list.insertAfter(15,1000);
-        String expected="{5}->{10}->{15}->{1000}->NULL";
-        assertEquals(expected,list.toString());
+        list.insertAfter(15, 1000);
+        String expected = "{5}->{10}->{15}->{1000}->NULL";
+        assertEquals(expected, list.toString());
+    }
+
+    @Test
+    void TestGreaterThanLength() {
+        System.out.println("12th Test SUCCESS");
+        LinkedList list = new LinkedList();
+        list.append(50);
+        list.append(150);
+        list.append(250);
+        list.append(350);
+        assertEquals("Exception", list.getKthFromEnd(70));
+    }
+
+    @Test
+    void testSameLength() {
+        System.out.println("13th Test SUCCESS");
+        LinkedList list = new LinkedList();
+        list.append(50);
+        list.append(150);
+        list.append(250);
+        list.append(350);
+        assertEquals("The value that located at index 3  from the tail in this linked list [50, 150, 250, 350] IS: 50", list.getKthFromEnd(3));
+    }
+
+    @Test
+    void testNotPositive() {
+        System.out.println("14th Test SUCCESS");
+        LinkedList list = new LinkedList();
+        list.append(50);
+        list.append(150);
+        list.append(250);
+        list.append(350);
+        assertEquals("Exception", list.getKthFromEnd(-2));
+    }
+
+    @Test
+    void listSize1() {
+        System.out.println("15th Test SUCCESS");
+        LinkedList list = new LinkedList();
+        list.append(50);
+        assertEquals("The value that located at index 0  from the tail in this linked list [50] IS: 50",
+                list.getKthFromEnd(0));
+        assertEquals("Exception", list.getKthFromEnd(5));
+    }
+
+    @Test
+    void happyPath() {
+        System.out.println("16th Test SUCCESS");
+        LinkedList list = new LinkedList();
+        list.append(50);
+        list.append(150);
+        list.append(250);
+        list.append(350);
+        assertEquals("The value that located at index 2  from the tail in this linked list [50, 150, 250, 350] IS: 150", list.getKthFromEnd(2));
     }
 
 }

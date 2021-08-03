@@ -54,6 +54,15 @@ public class App {
         list2.insertAfter(50,1000);
         System.out.println(list2);
         System.out.println("-------------------------------");
+        System.out.println("--------code challenge 07----------");
+        System.out.println("-------------------------------");
+        LinkedList list3=new LinkedList();
+        list3.append(20);
+        list3.append(40);
+        list3.append(80);
+        list3.append(100);
+        System.out.println(list3.getKthFromEnd(0));
+        System.out.println("-------------------------------");
 
     }
 }
