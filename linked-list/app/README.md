@@ -78,3 +78,22 @@ the complexity:
 
 <!-- ## Solution -->
 <!-- Show how to run your code, and examples of it in action -->
+============================================================
+## kth from end
+# Challenge Summary
+<!-- Description of the challenge -->
+method accept a value and return the node value that is k places from the tail of the linked list.
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![Image](Images/getkthTail-whiteboard.png)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+while loop to iterate over the linked list nodes 
+the complexity:
+- time :O(n)
+-  space : O(2n)
+
+<!-- ## Solution -->
+<!-- Show how to run your code, and examples of it in action -->
