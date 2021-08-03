@@ -119,4 +119,29 @@ public class LinkedList {
         }
     }
 
+    public Node zipLists(LinkedList list1, LinkedList list2) {
+        if (list1.head == null) {
+            return list2.head;
+        } else if (list2.head == null) {
+            return list1.head;
+        } else {
+            Node current1=list1.head;
+            Node current2=list2.head;
+            Node list1Next,list2Next;
+
+            while (current1 != null && current2 != null) {
+
+                list1Next=current1.next;
+                list2Next=current2.next;
+
+                current2.next=list1Next;
+                current1.next=current2;
+
+                current1=list1Next;
+                current2=list2Next;
+            }
+            return list1.head;
+        }
+    }
+
 }

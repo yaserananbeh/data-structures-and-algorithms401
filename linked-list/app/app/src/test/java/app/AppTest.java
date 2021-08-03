@@ -203,5 +203,64 @@ class AppTest {
         list.append(350);
         assertEquals("The value that located at index 2  from the tail in this linked list [50, 150, 250, 350] IS: 150", list.getKthFromEnd(2));
     }
+    @Test
+    void testZipAcceptFirstListNull() {
+        System.out.println("17th Test SUCCESS");
+        LinkedList list1 = new LinkedList();
+        LinkedList list2 = new LinkedList();
+        list2.append(50);
+        list2.append(150);
+        list2.append(250);
+        list2.append(350);
+        LinkedList zippedList=new LinkedList();
+        zippedList.head=zippedList.zipLists(list1,list2);
+        assertEquals("{50}->{150}->{250}->{350}->NULL",zippedList.toString());
+    }
+    @Test
+    void testZipAcceptSecondListNull() {
+        System.out.println("18th Test SUCCESS");
+        LinkedList list1 = new LinkedList();
+        list1.append(50);
+        list1.append(150);
+        list1.append(250);
+        list1.append(350);
+        LinkedList list2 = new LinkedList();
+        LinkedList zippedList=new LinkedList();
+        zippedList.head=zippedList.zipLists(list1,list2);
+        assertEquals("{50}->{150}->{250}->{350}->NULL",zippedList.toString());
+    }
+    @Test
+    void testZipAcceptTwoListsWithElements() {
+        System.out.println("19th Test SUCCESS");
+        LinkedList list1 = new LinkedList();
+        list1.append(50);
+        list1.append(150);
+        list1.append(250);
+        list1.append(350);
+        LinkedList list2 = new LinkedList();
+        list2.append(1);
+        list2.append(2);
+        list2.append(3);
+        list2.append(4);
+        LinkedList zippedList=new LinkedList();
+        zippedList.head=zippedList.zipLists(list1,list2);
+        assertEquals("{50}->{1}->{150}->{2}->{250}->{3}->{350}->{4}->NULL",zippedList.toString());
+    }
+    @Test
+    void testZipAcceptSecondListSizeLessThanFirstList() {
+        System.out.println("20th Test SUCCESS");
+        LinkedList list1 = new LinkedList();
+        list1.append(50);
+        list1.append(150);
+        list1.append(250);
+        list1.append(350);
+        LinkedList list2 = new LinkedList();
+        list2.append(1);
+        list2.append(2);
+        list2.append(3);
+        LinkedList zippedList=new LinkedList();
+        zippedList.head=zippedList.zipLists(list1,list2);
+        assertEquals("{50}->{1}->{150}->{2}->{250}->{3}->{350}->NULL",zippedList.toString());
+    }
 
 }
