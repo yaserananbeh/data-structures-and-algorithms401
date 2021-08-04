@@ -76,6 +76,14 @@ public class App {
         LinkedList zipList=new LinkedList();
         zipList.head=zipList.zipLists(list4,list5);
         System.out.println(zipList.toString());
+        System.out.println("-------------------------------");
+        System.out.println("--------code challenge 09----------");
+        System.out.println("-------------------------------");
+        LinkedList list6=new LinkedList();
+        list6.append(1);
+        list6.append(2);
+        list6.append(3);
+        System.out.println(list6.reverse(list6));
 
     }
 }
