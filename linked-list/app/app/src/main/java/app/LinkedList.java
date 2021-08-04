@@ -144,4 +144,25 @@ public class LinkedList {
         }
     }
 
+
+    public LinkedList reverse(LinkedList list) {
+        if(list.head==null) return null;
+        int count=0;
+        Node current=list.head;
+        while (current!=null){
+            count+=1;
+            current=current.next;
+        }
+        int newArr[]=new int[count];
+        current=list.head;
+        for (int i = 0; i < count; i++) {
+            newArr[i]=current.value;
+            current=current.next;
+        }
+        LinkedList newLinkedList=new LinkedList();
+        for (int i = newArr.length-1; i >=0; i--) {
+            newLinkedList.append(newArr[i]);
+        }
+        return newLinkedList;
+    }
 }
