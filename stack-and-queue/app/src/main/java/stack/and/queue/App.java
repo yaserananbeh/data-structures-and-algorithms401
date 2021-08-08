@@ -40,5 +40,17 @@ public class App {
         System.out.println("Dequeued node : "+queue1.dequeue());
 
         System.out.println("The queue after pop : "+queue1);
+        System.out.println("-----------------------------------");
+        System.out.println("-------------- Psedo Queue --------------");
+        System.out.println("-----------------------------------");
+        PseudoQueue <Integer>pseudoQueue=new PseudoQueue();
+        pseudoQueue.enqueue(1);
+        pseudoQueue.enqueue(2);
+        pseudoQueue.enqueue(3);
+        pseudoQueue.enqueue(4);
+        pseudoQueue.dequeue();
+        System.out.println(pseudoQueue);
+
+
     }
 }
