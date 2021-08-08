@@ -124,5 +124,37 @@ class AppTest {
 
         assertEquals("NULL", queue.toString());
     }
+    @Test void testPseudoQueue() {
+        System.out.println("test 15 SUCCESS");
+        PseudoQueue <Integer>pseudoQueue=new PseudoQueue();
+        pseudoQueue.enqueue(1);
+        pseudoQueue.enqueue(2);
+        pseudoQueue.enqueue(3);
+        pseudoQueue.enqueue(4);
+        pseudoQueue.dequeue();
+
+        assertEquals("PseudoQueue{stack1=[], stack2=[4, 3, 2]}", pseudoQueue.toString());
+    }
+    @Test void testPseudoQueueWithEmptyQueue() {
+        System.out.println("test 16 SUCCESS");
+        PseudoQueue <Integer>pseudoQueue=new PseudoQueue();
+//        pseudoQueue.enqueue(1);
+//        pseudoQueue.enqueue(2);
+//        pseudoQueue.enqueue(3);
+//        pseudoQueue.enqueue(4);
+        pseudoQueue.dequeue();
+
+        assertEquals("PseudoQueue{stack1=[], stack2=[]}", pseudoQueue.toString());
+    }
+    @Test void testPseudoDequeueTheDequeue() {
+        System.out.println("test 17 SUCCESS");
+        PseudoQueue <Integer>pseudoQueue=new PseudoQueue();
+        pseudoQueue.enqueue(1);
+        pseudoQueue.enqueue(2);
+        pseudoQueue.enqueue(3);
+        pseudoQueue.enqueue(4);
+
+        assertEquals(1, pseudoQueue.dequeue());
+    }
 
 }

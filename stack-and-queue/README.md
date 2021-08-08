@@ -24,3 +24,18 @@ A stack is an ordered list of elements where all insertions and deletions are ma
 - pop : method delete the top on the stack and return its value
 - deQueue : method to delete the front of the Queue and return its value
 
+-------------------------------------------------------------------------
+# Challenge Summary
+<!-- Description of the challenge -->
+doing a PseudoQueue that represent the Queue methods (enqueue, dequeue) using two stacks
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![Image](psedoQueueWhiteboard.png)
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+the complexity for the : 
+- enqueue : time > O(1) / space> O(1)
+- dequeue : time > O(n) / space> O(n)
+<!-- ## Solution
+Show how to run your code, and examples of it in action -->
