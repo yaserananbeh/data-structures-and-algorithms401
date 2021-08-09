@@ -3,6 +3,8 @@
  */
 package stack.and.queue;
 
+import org.checkerframework.checker.units.qual.C;
+
 public class App {
 
     public static void main(String[] args) {
@@ -50,7 +52,19 @@ public class App {
         pseudoQueue.enqueue(4);
         pseudoQueue.dequeue();
         System.out.println(pseudoQueue);
-
+        System.out.println("-----------------------------------");
+        System.out.println("-------------- Animal Shelter --------------");
+        System.out.println("-----------------------------------");
+        AnimalShelter animalShelter=new AnimalShelter();
+        CatShelter catty=new CatShelter("catty",5);
+        CatShelter mishmish=new CatShelter("mishmish",2);
+        DogShelter bull=new DogShelter("bull",3);
+        animalShelter.enqueue(catty);
+        animalShelter.enqueue(mishmish);
+        animalShelter.enqueue(bull);
+        System.out.println("AnimalShelter before dequeue : "+animalShelter);
+        animalShelter.dequeue("dog");
+        System.out.println("AnimalShelter after dequeue : "+ animalShelter);
 
     }
 }
