@@ -4,28 +4,34 @@
 package stack.and.queue;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
     //NOTE the terminal will show you some exception called Empty stack these will raise because the test has an edge
     // cases that require raising these exceptions
-    @Test void testPushOneNodeToStack() {
+    @Test
+    void testPushOneNodeToStack() {
         System.out.println("test 1 SUCCESS");
-        Stack <Integer>stack1=new Stack<>();
+        Stack<Integer> stack1 = new Stack<>();
         stack1.push(1);
         assertEquals("top -> 1 -> null", stack1.toString());
     }
-    @Test void testPushMultiNodeToStack() {
+
+    @Test
+    void testPushMultiNodeToStack() {
         System.out.println("test 2 SUCCESS");
-        Stack <Integer>stack1=new Stack<>();
+        Stack<Integer> stack1 = new Stack<>();
         stack1.push(1);
         stack1.push(2);
         stack1.push(3);
         assertEquals("top -> 3 -> 2 -> 1 -> null", stack1.toString());
     }
-    @Test void testPopOfTheStack() {
+
+    @Test
+    void testPopOfTheStack() {
         System.out.println("test 3 SUCCESS");
-        Stack <Integer>stack1=new Stack<>();
+        Stack<Integer> stack1 = new Stack<>();
         stack1.push(1);
         stack1.push(2);
         stack1.push(3);
@@ -33,9 +39,11 @@ class AppTest {
 
         assertEquals("top -> 2 -> 1 -> null", stack1.toString());
     }
-    @Test void testPopUntilEmptyStack() {
+
+    @Test
+    void testPopUntilEmptyStack() {
         System.out.println("test 4 SUCCESS");
-        Stack <Integer>stack1=new Stack<>();
+        Stack<Integer> stack1 = new Stack<>();
         stack1.push(1);
         stack1.push(2);
         stack1.push(3);
@@ -44,9 +52,11 @@ class AppTest {
         stack1.pop();
         assertEquals("NULL", stack1.toString());
     }
-    @Test void testPeekNextItem() {
+
+    @Test
+    void testPeekNextItem() {
         System.out.println("test 5 SUCCESS");
-        Stack <Integer>stack1=new Stack<>();
+        Stack<Integer> stack1 = new Stack<>();
         stack1.push(1);
         stack1.push(2);
         stack1.push(3);
@@ -54,54 +64,67 @@ class AppTest {
         stack1.pop();
         assertEquals(3, stack1.peek());
     }
-    @Test void testInstantiateEmptyStack() {
+
+    @Test
+    void testInstantiateEmptyStack() {
         System.out.println("test 6 SUCCESS");
-        Stack <Integer>stack1=new Stack<>();
+        Stack<Integer> stack1 = new Stack<>();
 
         assertEquals("NULL", stack1.toString());
     }
-    @Test void testExeptionPeekOrPopEmptyStack() {
+
+    @Test
+    void testExeptionPeekOrPopEmptyStack() {
         System.out.println("test 7 SUCCESS");
-        Stack <Integer>stack1=new Stack<>();
+        Stack<Integer> stack1 = new Stack<>();
         stack1.peek();
         stack1.pop();
 
         assertEquals("NULL", stack1.toString());
     }
-    @Test void testEnqueueOneNodeToQueue() {
+
+    @Test
+    void testEnqueueOneNodeToQueue() {
         System.out.println("test 8 SUCCESS");
-        Queue <Integer>queue1=new Queue<>();
+        Queue<Integer> queue1 = new Queue<>();
         queue1.enqueue(1);
         assertEquals("front -> 1 <- rear", queue1.toString());
     }
-    @Test void testEnqueueMultiNodeToQueue() {
+
+    @Test
+    void testEnqueueMultiNodeToQueue() {
         System.out.println("test 9 SUCCESS");
-        Queue <Integer>queue1=new Queue<>();
+        Queue<Integer> queue1 = new Queue<>();
         queue1.enqueue(1);
         queue1.enqueue(2);
         queue1.enqueue(3);
         assertEquals("front -> 1 -> 2 -> 3 <- rear", queue1.toString());
     }
-    @Test void testDequeueFromQueue() {
+
+    @Test
+    void testDequeueFromQueue() {
         System.out.println("test 10 SUCCESS");
-        Queue <Integer>queue1=new Queue<>();
+        Queue<Integer> queue1 = new Queue<>();
         queue1.enqueue(1);
         queue1.enqueue(2);
         queue1.enqueue(3);
         assertEquals(1, queue1.dequeue());
     }
-    @Test void testPeekQueue() {
+
+    @Test
+    void testPeekQueue() {
         System.out.println("test 11 SUCCESS");
-        Queue <String>queue1=new Queue<>();
+        Queue<String> queue1 = new Queue<>();
         queue1.enqueue("yaser");
         queue1.enqueue("love");
         queue1.enqueue("molokhia");
         assertEquals("yaser", queue1.peek());
     }
 
-    @Test void testDequeueToEmptyQueue() {
+    @Test
+    void testDequeueToEmptyQueue() {
         System.out.println("test 12 SUCCESS");
-        Queue <Boolean>queue1=new Queue<>();
+        Queue<Boolean> queue1 = new Queue<>();
         queue1.enqueue(true);
         queue1.enqueue(false);
         queue1.enqueue(true);
@@ -110,23 +133,29 @@ class AppTest {
         queue1.dequeue();
         assertEquals("NULL", queue1.toString());
     }
-    @Test void testInstantiateEmptyQueue () {
+
+    @Test
+    void testInstantiateEmptyQueue() {
         System.out.println("test 13 SUCCESS");
-        Queue <Boolean>queue1=new Queue<>();
+        Queue<Boolean> queue1 = new Queue<>();
 
         assertEquals("NULL", queue1.toString());
     }
-    @Test void testExeptionPeekOrDequeueEmptyQueue() {
+
+    @Test
+    void testExeptionPeekOrDequeueEmptyQueue() {
         System.out.println("test 14 SUCCESS");
-        Queue <Integer>queue=new Queue<>();
+        Queue<Integer> queue = new Queue<>();
         queue.peek();
         queue.dequeue();
 
         assertEquals("NULL", queue.toString());
     }
-    @Test void testPseudoQueue() {
+
+    @Test
+    void testPseudoQueue() {
         System.out.println("test 15 SUCCESS");
-        PseudoQueue <Integer>pseudoQueue=new PseudoQueue();
+        PseudoQueue<Integer> pseudoQueue = new PseudoQueue();
         pseudoQueue.enqueue(1);
         pseudoQueue.enqueue(2);
         pseudoQueue.enqueue(3);
@@ -135,9 +164,11 @@ class AppTest {
 
         assertEquals("PseudoQueue{stack1=[], stack2=[4, 3, 2]}", pseudoQueue.toString());
     }
-    @Test void testPseudoQueueWithEmptyQueue() {
+
+    @Test
+    void testPseudoQueueWithEmptyQueue() {
         System.out.println("test 16 SUCCESS");
-        PseudoQueue <Integer>pseudoQueue=new PseudoQueue();
+        PseudoQueue<Integer> pseudoQueue = new PseudoQueue();
 //        pseudoQueue.enqueue(1);
 //        pseudoQueue.enqueue(2);
 //        pseudoQueue.enqueue(3);
@@ -146,15 +177,63 @@ class AppTest {
 
         assertEquals("PseudoQueue{stack1=[], stack2=[]}", pseudoQueue.toString());
     }
-    @Test void testPseudoDequeueTheDequeue() {
+
+    @Test
+    void testPseudoDequeueTheDequeue() {
         System.out.println("test 17 SUCCESS");
-        PseudoQueue <Integer>pseudoQueue=new PseudoQueue();
+        PseudoQueue<Integer> pseudoQueue = new PseudoQueue();
         pseudoQueue.enqueue(1);
         pseudoQueue.enqueue(2);
         pseudoQueue.enqueue(3);
         pseudoQueue.enqueue(4);
 
         assertEquals(1, pseudoQueue.dequeue());
+    }
+
+    @Test
+    void testAnimalShelter() {
+        System.out.println("test 18 SUCCESS");
+        AnimalShelter animalShelter = new AnimalShelter();
+        CatShelter catty = new CatShelter("catty", 5);
+        CatShelter mishmish = new CatShelter("mishmish", 2);
+        DogShelter bull = new DogShelter("bull", 3);
+        animalShelter.enqueue(catty);
+        animalShelter.enqueue(mishmish);
+        animalShelter.enqueue(bull);
+        animalShelter.enqueue(bull);
+        animalShelter.dequeue("cat");
+        animalShelter.dequeue("dog");
+
+        assertEquals("AnimalShelter{dogs=front -> Dog : bull - age : 3 <- rear, cats=front -> Cat : mishmish -  age :" +
+                " 2 <- rear}", animalShelter.toString());
+    }
+
+    @Test
+    void testEnqueueToAnimalShelter() {
+        System.out.println("test 19 SUCCESS");
+        AnimalShelter animalShelter = new AnimalShelter();
+        CatShelter catty = new CatShelter("catty", 5);
+        DogShelter bull = new DogShelter("bull", 3);
+        animalShelter.enqueue(catty);
+        animalShelter.enqueue(bull);
+
+        assertEquals("AnimalShelter{dogs=front -> Dog : bull - age : 3 <- rear, cats=front -> Cat : catty -  age : 5 " +
+                "<- rear}", animalShelter.toString());
+    }
+
+    @Test
+    void testDequeueFromAnimalShelter() {
+        System.out.println("test 20 SUCCESS");
+        AnimalShelter animalShelter = new AnimalShelter();
+        CatShelter catty = new CatShelter("catty", 5);
+        DogShelter bull = new DogShelter("bull", 3);
+        animalShelter.enqueue(catty);
+        animalShelter.enqueue(bull);
+        animalShelter.dequeue("dog");
+
+
+        assertEquals("AnimalShelter{dogs=NULL, cats=front -> Cat : catty -  age : 5 <- rear}",
+                animalShelter.toString());
     }
 
 }

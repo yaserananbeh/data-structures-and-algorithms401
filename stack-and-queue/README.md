@@ -39,3 +39,19 @@ the complexity for the :
 - dequeue : time > O(n) / space> O(n)
 <!-- ## Solution
 Show how to run your code, and examples of it in action -->
+
+-------------------------------------------------------------------------
+# Challenge Summary
+<!-- Description of the challenge -->
+doing a Animal Shelter that have enqueue and dequeue methods to work with cat and dogs objects
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![Image](img/animalShelterWhiteboard.png)
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+the complexity for the : 
+- enqueue : time > O(1) / space> O(1)
+- dequeue : time > O(1) / space> O(1)
+<!-- ## Solution
+Show how to run your code, and examples of it in action -->
