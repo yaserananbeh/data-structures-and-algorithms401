@@ -62,9 +62,10 @@ public class App {
         animalShelter.enqueue(catty);
         animalShelter.enqueue(mishmish);
         animalShelter.enqueue(bull);
+        animalShelter.enqueue(bull);
         System.out.println("AnimalShelter before dequeue : "+animalShelter);
-        animalShelter.dequeue("dog");
-        System.out.println("AnimalShelter after dequeue : "+ animalShelter);
-
+        System.out.println("The dequeued dog is : "+ animalShelter.dequeue("dog"));
+        System.out.println("The dequeued cat is : "+ animalShelter.dequeue("cat"));
+        System.out.println("AnimalShelter after dequeue : "+animalShelter);
     }
 }

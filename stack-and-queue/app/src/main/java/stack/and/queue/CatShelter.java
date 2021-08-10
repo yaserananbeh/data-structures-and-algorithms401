@@ -7,6 +7,6 @@ public class CatShelter extends Animal {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Cat : "+getName()+" -  age : "+getAge();
     }
 }

@@ -7,6 +7,6 @@ public class DogShelter extends Animal {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Dog : "+getName()+" - age : "+getAge();
     }
 }
