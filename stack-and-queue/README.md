@@ -55,3 +55,20 @@ the complexity for the :
 - dequeue : time > O(1) / space> O(1)
 <!-- ## Solution
 Show how to run your code, and examples of it in action -->
+
+-------------------------------------------------------------------------
+# Challenge Summary
+<!-- Description of the challenge -->
+Create a method to check if every opening bracket has its closing bracket inside a string
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![Image](BracketsValidatorWhiteBoard.png)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+The for loop for looping and the nested if statements  
+The complexity : Time > O(n)\ Space > O(n)
+<!-- 
+## Solution
+Show how to run your code, and examples of it in action -->

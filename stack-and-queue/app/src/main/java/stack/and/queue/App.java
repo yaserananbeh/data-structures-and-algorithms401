@@ -3,7 +3,6 @@
  */
 package stack.and.queue;
 
-import org.checkerframework.checker.units.qual.C;
 
 public class App {
 
@@ -11,7 +10,7 @@ public class App {
         System.out.println("-----------------------------------");
         System.out.println("-------------- Stack --------------");
         System.out.println("-----------------------------------");
-        Stack <String>stack1=new Stack<>();
+        Stack <String>stack1=new Stack<String>();
         stack1.push("e1");
         stack1.push("e2");
         stack1.push("e3");
@@ -28,7 +27,7 @@ public class App {
         System.out.println("-----------------------------------");
         System.out.println("-------------- Queue --------------");
         System.out.println("-----------------------------------");
-        Queue <Integer>queue1=new Queue<>();
+        Queue <Integer>queue1=new Queue<Integer>();
         queue1.enqueue(100);
         queue1.enqueue(200);
         queue1.enqueue(300);
@@ -37,13 +36,13 @@ public class App {
 
         System.out.println("Peek : "+queue1.peek());
 
-        System.out.println("Is the Stack Empty : "+queue1.isEmpty());
+        System.out.println("Is the Queue Empty : "+queue1.isEmpty());
 
         System.out.println("Dequeued node : "+queue1.dequeue());
 
         System.out.println("The queue after pop : "+queue1);
         System.out.println("-----------------------------------");
-        System.out.println("-------------- Psedo Queue --------------");
+        System.out.println("-------------- Pseudo Queue --------------");
         System.out.println("-----------------------------------");
         PseudoQueue <Integer>pseudoQueue=new PseudoQueue();
         pseudoQueue.enqueue(1);
@@ -67,5 +66,12 @@ public class App {
         System.out.println("The dequeued dog is : "+ animalShelter.dequeue("dog"));
         System.out.println("The dequeued cat is : "+ animalShelter.dequeue("cat"));
         System.out.println("AnimalShelter after dequeue : "+animalShelter);
+        System.out.println("-----------------------------------");
+        System.out.println("-------------- Bracket Validator --------------");
+        System.out.println("-----------------------------------");
+        BracketsValidator bracketsValidator=new BracketsValidator();
+        String stringValueToValidate="{()()}";
+        System.out.println("Is "+ stringValueToValidate +" passed the bracket validator ? The result : ");
+        System.out.println(bracketsValidator.validateBrackets(stringValueToValidate));
     }
 }
