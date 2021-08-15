@@ -28,3 +28,20 @@ the approach that I've used to implement these methods the recursive functions
    - post order : traverse over the tree (Left,Right,Root)
 - Add to add a node hold the accepted value to the proper position inside the tree
 - Contains that checks if the tree has the node with accepted value
+----------------------------------------------------
+
+# Challenge Summary
+<!-- Description of the challenge -->
+Add method to return the max value inside the tree 
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![image](treeMaxWhiteboard.png)
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+the approach that I've used in this challenge the recursion function 
+With complexity : time > O(n) , space > O(1)
+
+[comment]: <> (## Solution)
+
+[comment]: <> (<!-- Show how to run your code, and examples of it in action -->)

@@ -43,5 +43,10 @@ public class App {
         Integer valueToSearch = 100;
         BinarySearchTree binarySearchTreeContains = new BinarySearchTree(root);
         System.out.println("Is the tree contains " + valueToSearch + " ? the result is : " + binarySearchTreeContains.contains(valueToSearch));
+
+        /***************************************************/
+        System.out.println("***********************************");
+        System.out.println("********* Tree max *************");
+        System.out.println(binaryTree.treeMax(root));
     }
 }
