@@ -6,3 +6,4 @@
 - [array-binary-search](array-binary-search/README.md)
 - [Linked-List](linked-list/app/README.md)
 - [Stack-And-Queue](stack-and-queue/README.md)
+- [Trees](trees/README.md)

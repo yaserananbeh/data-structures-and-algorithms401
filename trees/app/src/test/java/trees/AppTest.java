@@ -93,4 +93,19 @@ class AppTest {
         binarySearchTreeAdd.add(valueToAdd);
         assertEquals("[80, 90, 95, 100, 110, 120, 140]",binarySearchTreeAdd.inOrder(root).toString());
     }
+    @Test
+    void testTreeMax() {
+        System.out.println("test 8 pass");
+        Node<Integer> node4 = new Node(80);
+        Node<Integer> node5 = new Node(95);
+        Node<Integer> node6 = new Node(110);
+
+        Node<Integer> node2 = new Node(90, node4, node5);
+        Node<Integer> node3 = new Node(120, node6, null);
+
+        Node<Integer> root = new Node(100, node2, node3);
+        BinaryTree binaryTree=new BinaryTree();
+
+        assertEquals(120,binaryTree.treeMax(root));
+    }
 }

@@ -43,6 +43,22 @@ public class BinaryTree {
         }
         return postOrderArray;
     }
+    int max=0;
+    public int treeMax(Node root){
+        if(root!=null){
+            if ((int)root.getValue()>max){
+                max=(int)root.getValue();
+            }
+            if (root.getLeftChild()!=null){
+                treeMax(root.getLeftChild());
+            }
+            if (root.getRightChild()!=null){
+                treeMax(root.getRightChild());
+            }
+        }
+        return max;
+    }
+
 
     @Override
     public String toString() {
