@@ -48,5 +48,9 @@ public class App {
         System.out.println("***********************************");
         System.out.println("********* Tree max *************");
         System.out.println(binaryTree.treeMax(root));
+        /***************************************************/
+        System.out.println("***********************************");
+        System.out.println("********* breadth first *************");
+        System.out.println(binaryTree.breadthFirst(root));
     }
 }

@@ -45,3 +45,21 @@ With complexity : time > O(n) , space > O(1)
 [comment]: <> (## Solution)
 
 [comment]: <> (<!-- Show how to run your code, and examples of it in action -->)
+
+----------------------------------------------------
+
+# Challenge Summary
+<!-- Description of the challenge -->
+Add method to the tree to handle the breadth first traverse level by level 
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![image](breadthFirstWhiteboard.png)
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+the approach that I've used in this challenge the while loop
+With complexity : time > O(n) , space > O(n)
+
+[comment]: <> (## Solution)
+
+[comment]: <> (<!-- Show how to run your code, and examples of it in action -->)
