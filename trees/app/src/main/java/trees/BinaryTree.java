@@ -58,7 +58,26 @@ public class BinaryTree {
         }
         return max;
     }
+    ArrayList <Object> breadthFirstArr=new ArrayList<>();
 
+    public ArrayList breadthFirst(Node root){
+        if (root!=null){
+
+        Queue<Node> breath=new Queue();
+        breath.enqueue(root);
+        while (breath.peek()!=null){
+            Node front=  breath.dequeue();
+            breadthFirstArr.add(front.getValue());
+            if (front.getLeftChild() !=null)
+                breath.enqueue(front.getLeftChild());
+            if (front.getRightChild() !=null)
+                breath.enqueue(front.getRightChild());
+
+        }
+        return breadthFirstArr;
+        }
+        else return null;
+    }
 
     @Override
     public String toString() {
