@@ -52,5 +52,18 @@ public class App {
         System.out.println("***********************************");
         System.out.println("********* breadth first *************");
         System.out.println(binaryTree.breadthFirst(root));
+        /***************************************************/
+        System.out.println("***********************************");
+        System.out.println("********* K ary Tree *************");
+            Ktree tree=new Ktree(3);
+            Knode a = new Knode("a");
+            Knode b = new Knode("b");
+            Knode c = new Knode("c");
+
+            tree.root.addChild(a);
+            a.addChild(b);
+            tree.root.addChild(c);
+            tree.traverseKtree(tree.root);
+
     }
 }
